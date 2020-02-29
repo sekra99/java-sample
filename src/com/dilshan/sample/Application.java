@@ -25,10 +25,15 @@ public class Application {
 List<Sensor> sensors= new ArrayList<>();
 
         Sensor sensor1 = new Sensor("Living room",45);
+        sensors.add(sensor1);
         Sensor sensor2 = new Sensor("bath room",55);
+        sensors.add(sensor2);
         Sensor sensor3 = new Sensor("lili room",30);
+        sensors.add(sensor3);
         Sensor sensor4 = new Sensor("Lig room",65);
+        sensors.add(sensor4);
         Sensor sensor5 = new Sensor("Ligg room",75);
+        sensors.add(sensor5);
 
         List<Sensor> hotsensors=sensors.stream().filter(sensor -> sensor.getValue()>35).collect(Collectors.toList());
         System.out.println(hotsensors);
